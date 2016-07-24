@@ -1,0 +1,23 @@
+{
+  "name": "imdb_clone",
+  "version": "1.0.0",
+  "description": "this is movie rating app like imdb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "imdb",
+    "movie",
+    "rating"
+  ],
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "jade": "*",
+    "mongoose": "*",
+    "pug": "^0.1.0"
+  },
+  "author": "mike",
+  "license": "MIT"
+}

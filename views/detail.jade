@@ -1,0 +1,89 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+
+    // Bootstrap Core CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    // Theme CSS
+    link(href='css/freelancer.css', rel='stylesheet')
+  body#page-top.index
+    // Navigation
+    nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            |  Menu
+            i.fa.fa-bars
+          a.navbar-brand(href='/') Movies
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.hidden
+              a(href='#')
+            li.page-scroll
+              a(href='/cateogry/Action') Action
+            li.page-scroll
+              a(href='/cateogry/Drama') Drama
+            li.page-scroll
+              a(href='/cateogry/Thriller') Thriller
+            li.page-scroll
+              a(href='/cateogry/Comedy') Comedy
+            li.page-scroll
+              a(href='/cateogry/Romance') Romance
+            li.page-scroll
+              a(href='/cateogry/Adventure') Adventure
+            li.page-scroll
+              a(href='/cateogry/Mystery') Mystery
+            li.page-scroll
+              a(href='/cateogry/Science Fiction') Science Fiction
+        // /.navbar-collapse
+      // /.container
+    // Page Content
+    .container
+      // Portfolio Item Heading
+      .row
+        .col-lg-12
+          h1.page-header
+            br
+            br
+      // /.row
+      // Portfolio Item Row
+      .row
+        .col-md-8
+          img.img-responsive(src='images/#{my[0].postername}.jpg', alt='')
+        .col-md-4
+          h3 #{my[0].title}
+          p
+            |  #{my[0].storyline}
+            li Director Name : #{my[0].directorname}
+          ul
+            li Rating(imdb) : #{my[0].ratingimdb}
+            li Rating(Rotten Tomatoes) : #{my[0].ratingrottentomtoes}
+            li Release Year : #{my[0].releaseyear}
+            li User Rated : #{my[0].noofuserrated}
+            li Time Length : #{my[0].timelength}
+            li Director Name : #{my[0].directorname}
+            li Cateogry : #{my[0].cateogry}
+            li language : #{my[0].language}
+            li Casts : #{my[0].starcast}
+            li Short Description : #{my[0].description}
+      // Footer
+      footer
+        .row
+          .col-lg-12
+            p Copyright © Your Website 2014
+        // /.row
+    // /.container
+
+    script(src='js/jquery.min.js')
+    // Bootstrap Core JavaScript
+    script(src='js/bootstrap.min.js')
+    script(src='js/freelancer.js')

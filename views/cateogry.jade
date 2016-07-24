@@ -1,0 +1,80 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+
+    // Bootstrap Core CSS
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    // Theme CSS
+    link(href='/css/freelancer.css', rel='stylesheet')
+  body#page-top.index
+    // Navigation
+    nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            |  Menu
+            i.fa.fa-bars
+          a.navbar-brand(href='/') Movies
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.hidden
+              a(href='#')
+            li.page-scroll
+              a(href='/cateogry/Action') Action
+            li.page-scroll
+              a(href='/cateogry/Drama') Drama
+            li.page-scroll
+              a(href='/cateogry/Thriller') Thriller
+            li.page-scroll
+              a(href='/cateogry/Comedy') Comedy
+            li.page-scroll
+              a(href='/cateogry/Romance') Romance
+            li.page-scroll
+              a(href='/cateogry/Adventure') Adventure
+            li.page-scroll
+              a(href='/cateogry/Mystery') Mystery
+            li.page-scroll
+              a(href='/cateogry/Science Fiction') Science Fiction
+        // /.navbar-collapse
+      // /.container-fluid
+    // Header
+    // Portfolio Grid Section
+    section#portfolio
+      .container
+        .row
+          .col-lg-12.text-center
+          br
+        .row
+        - each name in my
+          .col-sm-3.portfolio-item
+            a.portfolio-link(href='/#{name.id}', data-toggle='modal')
+              .caption
+                .caption-content
+                  i #{name.title}
+              img.img-responsive(src='images/#{name.postername}.jpg', alt='')
+
+
+
+
+
+    // Footer
+    footer.text-center
+      .footer-below
+        .container
+          .row
+            .col-lg-12
+              | Copyright © Your Website 2016
+    // jQuery
+    script(src='/js/jquery.min.js')
+    // Bootstrap Core JavaScript
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/freelancer.js')

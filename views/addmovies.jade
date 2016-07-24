@@ -1,0 +1,33 @@
+extends layout2
+block content
+    h2 Add New Movie
+    form(method ='post', action='#', enctype='multipart/form-data')
+    form-group
+    label Title
+    input.form-control(type='text',name ='title')
+    .form-group
+    label Description
+    textarea.form-control(name='description')
+    form-group
+    label Cateogry
+    input.form-control(type='text',name ='cateogry')
+    form-group
+    label Release Year
+    input.form-control(type='text',name ='releaseyear')
+    form-group
+    label Time Length
+    input.form-control(type='text',name ='timelength')
+    form-group
+    label Langugae
+    input.form-control(type='text',name ='langugae')
+    form-group
+    label StarCast
+    input.form-control(type='text',name ='starcast')
+    form-group
+    label Director Name
+    input.form-control(type='text',name ='directorname')
+    form-group
+    label Movie Image
+    input.form-control(type='file',name ='movieimage')
+    br
+    button.btn.btn-default(type='submit') Submit
